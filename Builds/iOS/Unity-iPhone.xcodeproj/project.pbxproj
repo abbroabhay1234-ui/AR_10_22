@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10000010000000000000002 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10000010000000000000001 /* ARKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A10000020000000000000002 /* libUnityARKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A10000020000000000000001 /* libUnityARKit.a */; };
+		A10000030000000000000002 /* UnityARKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A10000030000000000000001 /* UnityARKit.m */; };
 		00000000008063A1000160D3 /* libiPhone-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A1C72A0E8063A1000160D3 /* libiPhone-lib.a */; };
 		030A68812E193A334BDD7087 /* iOSStepCounter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E23E0EB80EBE2A174954738 /* iOSStepCounter.mm */; };
 		1D45A5CCCCC4E76191AAF1D0 /* libil2cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE54DC7E56FA015DDC9659BD /* libil2cpp.a */; };
@@ -155,6 +158,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A10000010000000000000001 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		A10000020000000000000001 /* libUnityARKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUnityARKit.a; path = Libraries/libUnityARKit.a; sourceTree = SOURCE_ROOT; };
+		A10000030000000000000001 /* UnityARKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnityARKit.m; sourceTree = "<group>"; };
 		004B7ED377C245FA07EA4CA7 /* Unity.TextMeshPro_CodeGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = Unity.TextMeshPro_CodeGen.c; path = Il2CppOutputProject/Source/il2cppOutput/Unity.TextMeshPro_CodeGen.c; sourceTree = SOURCE_ROOT; };
 		0084A6F53FDC53D8C88D04BC /* mscorlib__14.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mscorlib__14.cpp; path = Il2CppOutputProject/Source/il2cppOutput/mscorlib__14.cpp; sourceTree = SOURCE_ROOT; };
 		01542E4A7351BF537D5F9A2D /* UnityEngine.TextCoreTextEngineModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UnityEngine.TextCoreTextEngineModule.cpp; path = Il2CppOutputProject/Source/il2cppOutput/UnityEngine.TextCoreTextEngineModule.cpp; sourceTree = SOURCE_ROOT; };
@@ -567,6 +573,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000010000000000000002 /* ARKit.framework in Frameworks */,
+				A10000020000000000000002 /* libUnityARKit.a in Frameworks */,
 				00000000008063A1000160D3 /* libiPhone-lib.a in Frameworks */,
 				8A3831B5246956AA00CD74FD /* Metal.framework in Frameworks */,
 				9D690CCF21BFD341005026B1 /* Security.framework in Frameworks */,
@@ -665,6 +673,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A10000010000000000000001 /* ARKit.framework */,
 				7F36C11013C5C673007FBDD9 /* AVFoundation.framework */,
 				8A20382C213D4B3C005E6C56 /* AVKit.framework */,
 				8358D1B70ED1CC3700E3A684 /* AudioToolbox.framework */,
@@ -1118,6 +1127,8 @@
 		D8A1C7220E80637F000160D3 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A10000020000000000000001 /* libUnityARKit.a */,
+				A10000030000000000000001 /* UnityARKit.m */,
 				0DB64C2E13F03F7FFEA29216 /* com.unity.inputsystem */,
 				03F528621B447098000F4FB8 /* Il2CppOptions.cpp */,
 				AAC3E38B1A68945900F6174A /* RegisterFeatures.cpp */,
@@ -1354,6 +1365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000030000000000000002 /* UnityARKit.m in Sources */,
 				8BEDFA3A29C88F86007F26D7 /* UnityViewControllerBase+visionOS.mm in Sources */,
 				862C245020AEC7AC006FB4AD /* UnityWebRequest.mm in Sources */,
 				9D25ABE9213FB7CC00354C27 /* Il2CppOptions.cpp in Sources */,

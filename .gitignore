@@ -2,8 +2,11 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
 [Ll]ogs/
+# Ignore xcodebuild derived data in Builds/iOS
+Builds/iOS/build/
+# But allow IL2CPP build tools
+!Builds/iOS/Il2CppOutputProject/IL2CPP/build/
 [Uu]ser[Ss]ettings/
 [Mm]emoryCaptures/
 [Rr]ecordings/

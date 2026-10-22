@@ -17,6 +17,11 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer || sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+      - name: Fix IL2CPP Executable Permissions
+        working-directory: Builds/iOS
+        run: |
+          chmod -R +x Il2CppOutputProject/IL2CPP/build/ || true
+
       - name: Build Xcode Project
         working-directory: Builds/iOS
         run: |
@@ -26,6 +31,7 @@ jobs:
             -scheme Unity-iPhone \
             -configuration Release \
             -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
@@ -36,8 +42,8 @@ jobs:
         working-directory: Builds/iOS
         run: |
           mkdir -p Payload
-          # Copy compiled .app bundle into Payload
-          APP_PATH=$(find build/Build/Products/Release-iphoneos -name "*.app" -maxdepth 1 | head -n 1)
+          # Find compiled .app bundle anywhere in build directory
+          APP_PATH=$(find build -name "*.app" -type d | head -n 1)
           echo "Found app at: $APP_PATH"
           cp -r "$APP_PATH" Payload/
           zip -qr VirtualStrikeZone.ipa Payload
